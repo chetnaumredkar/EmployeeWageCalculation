@@ -5,34 +5,26 @@ public class ComputationOfEmployeeWage {
 		int Emp_Rate_Per_Hour = 20;
 		int Full_Day_Hour = 8;
 		int IS_FULL_TIME = 1;
-		int IS_PART_TIME = 0;
+		int IS_PART_TIME = 2;
 		int empHrs = 0;
 		int empWage = 0;
-		double empcheck = Math.floor(Math.random() * 10) % 2;
-		if (empcheck == IS_FULL_TIME) {
-			System.out.println("Employee is Present");
-		} else {
-			System.out.println("Employee is not Present");
-		}
-		// =-------------------------------------------------------------------------------
-		// UC2 problem solving
-		if (empcheck == IS_FULL_TIME) {
-			empHrs = 8;
-		} else {
-			empHrs = 0;
-		}
+		int empcheck =(int) ((Math.random()*100) % 3);
+		
+		switch(empcheck)  
+        {
+            case 1:
+                empHrs=16;
+                break;
+            case 2:
+                empHrs= 8;
+           break;
+           default:
+                empHrs= 0;
+                break;
+        }
+		
+	
 		empWage = empHrs * Emp_Rate_Per_Hour;
 		System.out.println("emp wage: " + empWage);
-		//-------------------------------------------------------------------------------
-		double empcheck1 = Math.floor(Math.random() * 10) % 2;
-		if(empcheck1==IS_FULL_TIME) {
-			empHrs=16;
-			}
-		else {
-				empHrs=8;
-		}
-		empWage = empHrs * Emp_Rate_Per_Hour;
-		System.out.println("emp wage: " + empWage);
-
 	}
 }
