@@ -10,8 +10,8 @@ public class ComputationOfEmployeeWage {
 		int empWage = 0;
 		int Total_Working_Day=20;
 		int Total_Income;
+		for(int i=0;i<20;i++) {
 		int empcheck =(int) ((Math.random()*100) % 3);
-		
 		switch(empcheck)  
         {
             case 1:
@@ -19,16 +19,18 @@ public class ComputationOfEmployeeWage {
                 break;
             case 2:
                 empHrs= 8;
-           break;
+                break;
            default:
                 empHrs= 0;
                 break;
         }
 		
-		empWage = empHrs * Emp_Rate_Per_Hour;
-		System.out.println("Daily emp wage: " + empWage);
-		Total_Income=empWage*Total_Working_Day;			
-		System.out.println("The total income of an employee in a month is :"+Total_Income+"RS");
-			
+		empWage+=  (empHrs * Emp_Rate_Per_Hour);
 		}
+		System.out.println("Daily emp wage: " + empWage);
+		//Total_Income=empWage*Total_Working_Day;			
+		//System.out.println("The total income of an employee in a month is :"+Total_Income+"RS");
+			
+		
 	}
+}
